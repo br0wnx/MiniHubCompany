@@ -13,8 +13,16 @@ export function GroupCompaniesSection() {
       companyName: "Java Sarana Mitra Sejati",
       website: "https://javasaranamitrasejati.com/",
       manager: {
-        Semarang: { name: "Djoko Susilo", phone: "628179513773" },
-        Lampung: { name: "Herry Mulyadi", phone: "6281331146858" },
+        Semarang: {
+          name: "Djoko Susilo",
+          phone: "628179513773",
+          map: "https://maps.app.goo.gl/ekCLQTnGGkyC4zRdA",
+        },
+        Lampung: {
+          name: "Herry Mulyadi",
+          phone: "6281331146858",
+          map: "https://maps.app.goo.gl/1fQq9e6i2oPSjX1S8",
+        },
       },
     },
     {
@@ -24,9 +32,21 @@ export function GroupCompaniesSection() {
       companyName: "Bintang Laut Platinum",
       website: "https://bintanglautplatinum.com/",
       manager: {
-        Jakarta: { name: "Charlie", phone: "628111915588" },
-        Semarang: { name: "Ulfa", phone: "6281322343431" },
-        Surabaya: { name: "Nunik", phone: "6281234505653" },
+        Jakarta: {
+          name: "Charlie",
+          phone: "628111915588",
+          map: "https://maps.app.goo.gl/G4xosG2W9799aohCA",
+        },
+        Semarang: {
+          name: "Ulfa",
+          phone: "6281322343431",
+          map: "https://maps.app.goo.gl/Hiq3VaKpFs3cWnEn8",
+        },
+        Surabaya: {
+          name: "Nunik",
+          phone: "6281234505653",
+          map: "https://maps.app.goo.gl/L7p5kc7s7oR6aBsDA",
+        },
       },
     },
     {
@@ -36,7 +56,11 @@ export function GroupCompaniesSection() {
       companyName: "Bintang Rezeki Graha",
       website: "https://bintangrejeki.com/",
       manager: {
-        Surabaya: { name: "Rachel", phone: "62811242002" },
+        Surabaya: {
+          name: "Rachel",
+          phone: "62811242002",
+          map: "https://maps.app.goo.gl/htEeFzVEasxki9LF9",
+        },
       },
     },
   ];
@@ -47,6 +71,10 @@ export function GroupCompaniesSection() {
 
   const openWhatsApp = (phone) => {
     window.open(`https://wa.me/${phone}`, "_blank");
+  };
+
+  const openMap = (url) => {
+    window.open(url, "_blank");
   };
 
   return (
@@ -135,6 +163,7 @@ export function GroupCompaniesSection() {
 
                         {/* Icon Aksi */}
                         <div className="flex items-center gap-3">
+                          {/* WhatsApp */}
                           <div
                             onClick={() =>
                               manager?.phone && openWhatsApp(manager.phone)
@@ -143,7 +172,12 @@ export function GroupCompaniesSection() {
                           >
                             <WhatsAppIcon className="text-[#000065] group-hover:text-white" />
                           </div>
-                          <div className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#000065] group cursor-pointer">
+
+                          {/* Map */}
+                          <div
+                            onClick={() => manager?.map && openMap(manager.map)}
+                            className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#000065] group cursor-pointer"
+                          >
                             <MapOutlinedIcon className="text-[#000065] group-hover:text-white" />
                           </div>
                         </div>

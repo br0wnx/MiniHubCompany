@@ -26,8 +26,7 @@ export function BranchManagersSection() {
       },
       {
         name: "Surabaya 2",
-        url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63330.23415471025!2d112.6287842!3d-7.250445499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTUnMDAuMCJTIDExMsKwMzcnMjQuMCJF!5e0!3m2!1sid!2sid!4v0",
-        directLink: "https://maps.app.goo.gl/mj8iTxKb8FwYbM7S7",
+        url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d26409.769219912738!2d112.70855724345918!3d-7.222684133698431!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f9965905aa07%3A0x7a0225faa7053f34!2sPT.%20Bintang%20Rejeki%20Graha%20(Tj.%20Batu)!5e1!3m2!1sen!2sus!4v1761414860120!5m2!1sen!2sus",
       },
     ],
     Semarang: [

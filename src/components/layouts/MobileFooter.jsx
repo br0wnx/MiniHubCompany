@@ -8,18 +8,36 @@ export function MobileFooter() {
       {/* Icon Section */}
       <div className="flex items-center justify-center gap-5 mb-3">
         {/* Instagram */}
-        <div className=" rounded-l border border-white text-[#000065] transition hover:bg-[#000065] hover:text-white cursor-pointer">
-          <InstagramIcon fontSize="medium" />
+        <div className="rounded-l border border-white text-[#000065] transition cursor-pointer">
+          <a
+            href="https://www.instagram.com/dwipakharismamitra/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InstagramIcon fontSize="medium" />
+          </a>
         </div>
 
         {/* LinkedIn */}
-        <div className=" rounded-l border border-white text-[#000065] transition hover:bg-[#000065] hover:text-white cursor-pointer">
-          <LinkedInIcon fontSize="medium" />
+        <div className="rounded-l border border-white text-[#000065] transition cursor-pointer">
+          <a
+            href="https://www.linkedin.com/company/dwipakharismamitra/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon fontSize="medium" />
+          </a>
         </div>
 
         {/* Facebook */}
-        <div className=" rounded-xl border border-white text-[#000065] transition hover:bg-[#000065] hover:text-white cursor-pointer">
-          <FacebookIcon fontSize="medium" />
+        <div className="rounded-xl border border-white text-[#000065] transition cursor-pointer">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FacebookIcon fontSize="medium" />
+          </a>
         </div>
       </div>
 
