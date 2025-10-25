@@ -11,9 +11,10 @@ export function GroupCompaniesSection() {
       logo: "/Assets/logo-dkm group/logojava.png",
       city: ["Semarang", "Lampung"],
       companyName: "Java Sarana Mitra Sejati",
+      website: "https://javasaranamitrasejati.com/",
       manager: {
-        Semarang: "Djoko Susilo",
-        Lampung: "Herry Mulyadi",
+        Semarang: { name: "Djoko Susilo", phone: "628179513773" },
+        Lampung: { name: "Herry Mulyadi", phone: "6281331146858" },
       },
     },
     {
@@ -21,10 +22,11 @@ export function GroupCompaniesSection() {
       logo: "/Assets/logo-dkm group/logoblp.png",
       city: ["Jakarta", "Semarang", "Surabaya"],
       companyName: "Bintang Laut Platinum",
+      website: "https://bintanglautplatinum.com/",
       manager: {
-        Jakarta: "Charlie",
-        Semarang: "Ulfa",
-        Surabaya: "Nunik",
+        Jakarta: { name: "Charlie", phone: "628111915588" },
+        Semarang: { name: "Ulfa", phone: "6281322343431" },
+        Surabaya: { name: "Nunik", phone: "6281234505653" },
       },
     },
     {
@@ -32,14 +34,19 @@ export function GroupCompaniesSection() {
       logo: "/Assets/logo-dkm group/logobr.png",
       city: ["Surabaya"],
       companyName: "Bintang Rezeki Graha",
+      website: "https://bintangrejeki.com/",
       manager: {
-        Surabaya: "Rachel",
+        Surabaya: { name: "Rachel", phone: "62811242002" },
       },
     },
   ];
 
   const toggleDropdown = (id) => {
     setOpenDropdown(openDropdown === id ? null : id);
+  };
+
+  const openWhatsApp = (phone) => {
+    window.open(`https://wa.me/${phone}`, "_blank");
   };
 
   return (
@@ -73,9 +80,7 @@ export function GroupCompaniesSection() {
                 <h4 className="font-semibold text-lg md:text-xl">
                   {company.companyName}
                 </h4>
-                <p className="text-sm mt-1">
-                  {company.city.join(", ")}
-                </p>
+                <p className="text-sm mt-1">{company.city.join(", ")}</p>
               </div>
 
               {/* Panah dropdown */}
@@ -101,9 +106,14 @@ export function GroupCompaniesSection() {
               <div className="border-t border-gray-200 p-5 bg-gray-50">
                 {/* Tombol Aksi */}
                 <div className="flex justify-between gap-3 mb-5">
-                  <button className="flex-1 bg-gray-200 py-2 rounded-lg font-medium hover:bg-gray-300 transition text-sm">
+                  <a
+                    href={company.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-gray-200 py-2 rounded-lg font-medium hover:bg-gray-300 transition text-sm text-center"
+                  >
                     Official Website
-                  </button>
+                  </a>
                   <button className="flex-1 bg-gray-200 py-2 rounded-lg font-medium hover:bg-gray-300 transition text-sm">
                     Company Profile
                   </button>
@@ -111,31 +121,35 @@ export function GroupCompaniesSection() {
 
                 {/* City and Branch Manager */}
                 <div className="space-y-3">
-                  {company.city.map((cityName, i) => (
-                    <div
-                      key={i}
-                      className="flex justify-between items-center border-b border-gray-200 pb-3 last:border-none"
-                    >
-                      <div>
-                        <p className="font-semibold text-sm">
-                          {cityName}
-                        </p>
-                        <p className="text-sm">
-                          {company.manager[cityName] || "-"}
-                        </p>
-                      </div>
+                  {company.city.map((cityName, i) => {
+                    const manager = company.manager[cityName];
+                    return (
+                      <div
+                        key={i}
+                        className="flex justify-between items-center border-b border-gray-200 pb-3 last:border-none"
+                      >
+                        <div>
+                          <p className="font-semibold text-sm">{cityName}</p>
+                          <p className="text-sm">{manager?.name || "-"}</p>
+                        </div>
 
-                      {/* Icon Aksi */}
-                      <div className="flex items-center gap-3">
-                        <div className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#000065] group">
-                          <WhatsAppIcon className="text-[#000065] group-hover:text-white cursor-pointer" />
-                        </div>
-                        <div className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#000065] group">
-                          <MapOutlinedIcon className="text-[#000065] group-hover:text-white cursor-pointer" />
+                        {/* Icon Aksi */}
+                        <div className="flex items-center gap-3">
+                          <div
+                            onClick={() =>
+                              manager?.phone && openWhatsApp(manager.phone)
+                            }
+                            className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#000065] group cursor-pointer"
+                          >
+                            <WhatsAppIcon className="text-[#000065] group-hover:text-white" />
+                          </div>
+                          <div className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#000065] group cursor-pointer">
+                            <MapOutlinedIcon className="text-[#000065] group-hover:text-white" />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}

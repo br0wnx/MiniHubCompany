@@ -11,24 +11,27 @@ export function SupportDepartments() {
   };
 
   const departmentList = [
-    { dept: "ED & GM", name: "Rio Tanujaya" },
-    { dept: "BisDev", name: "Iko Handriadianto [1]" },
-    { dept: "BisDev", name: "Iko Handriadianto [2]" },
-    { dept: "IT System", name: "Richard" },
-    { dept: "Finance", name: "Rachel" },
-    { dept: "Depot Ops.", name: "Aris Susanto" },
-    { dept: "Tax", name: "Pedut" },
-    { dept: "M&R", name: "Ahmad Pauking" },
+    { dept: "ED & GM", name: "Rio Tanujaya", phone: "628155001210" },
+    { dept: "BisDev", name: "Iko Handriadianto [1]", phone: "62811346728" },
+    { dept: "BisDev", name: "Iko Handriadianto [2]", phone: "62811346706" },
+    { dept: "IT System", name: "Richard", phone: "6281219199300" },
+    { dept: "Finance", name: "Rachel", phone: "62811242002" },
+    { dept: "Depot Ops.", name: "Aris Susanto", phone: "6281319208270" },
+    { dept: "Tax", name: "Pedut", phone: "6287818457875" },
+    { dept: "M&R", name: "Ahmad Pauking", phone: "6287830597982" },
   ];
+
+  const openWhatsApp = (phone) => {
+    const url = `https://wa.me/${phone}`;
+    window.open(url, "_blank");
+  };
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6 ">
       {/* Customer Support */}
       <div className="p-4 bg-white rounded-lg shadow-sm">
         <h3 className="font-semibold">Customer Support</h3>
-        <p className="text-sm mt-1">
-          Available Mon - Fri, 09:00 - 16.00 WIB
-        </p>
+        <p className="text-sm mt-1">Available Mon - Fri, 09:00 - 16.00 WIB</p>
 
         <div className="flex gap-2 mt-3">
           <button
@@ -68,11 +71,12 @@ export function SupportDepartments() {
           {departmentList.map((item, i) => (
             <div
               key={i}
-              onClick={() => handleButtonClick(i)}
+              onClick={() => {
+                handleButtonClick(i);
+                openWhatsApp(item.phone);
+              }}
               className={`flex justify-between items-center rounded-md p-2 cursor-pointer transition-colors ${
-                activeButton === i
-                  ? "bg-[#000065] text-white"
-                  : "bg-gray-200"
+                activeButton === i ? "bg-[#000065] text-white" : "bg-gray-200"
               }`}
             >
               <div className="flex flex-col">

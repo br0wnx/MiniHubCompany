@@ -16,7 +16,7 @@ export function HeroSection() {
         </h2>
 
         {/* Buttons */}
-        <div className="flex gap-3 mt-2">
+        <div className="flex gap-3 mt-14">
           <button className="bg-gray-100 font-medium px-4 py-2 rounded-md shadow-sm">
             Official Website
           </button>
