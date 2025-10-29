@@ -35,7 +35,7 @@ export function SupportDepartments() {
 
         <div className="flex gap-2 mt-3">
           <button
-            onClick={() => handleButtonClick("hotline")}
+            onClick={() => window.open("tel:02144854918")}
             className={`flex-1 flex items-center justify-center gap-1 rounded-md py-2 transition-colors ${
               activeButton === "hotline"
                 ? "bg-[#000065] text-white"
@@ -47,7 +47,12 @@ export function SupportDepartments() {
           </button>
 
           <button
-            onClick={() => handleButtonClick("email")}
+            onClick={() =>
+              window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=contactus@dwipakharismamitra.co.id",
+                "_blank"
+              )
+            }
             className={`flex-1 flex items-center justify-center gap-1 rounded-md py-2 transition-colors ${
               activeButton === "email"
                 ? "bg-[#000065] text-white"
