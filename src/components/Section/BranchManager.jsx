@@ -72,7 +72,7 @@ export function BranchManagersSection() {
               onClick={() =>
                 window.open(`https://wa.me/${item.phone}`, "_blank")
               }
-              className="flex justify-between items-center rounded-md p-2 md:p-3 cursor-pointer transition-all duration-300 bg-gray-200 hover:bg-[#000065] hover:text-white"
+              className="flex justify-between items-center rounded-md p-2 md:p-3 cursor-pointer transition-all duration-300 bg-gray-200 hover:bg-[#1F2D4B] hover:text-white"
             >
               <div className="flex flex-col">
                 <p className="text-[11px] md:text-xs text-inherit">
@@ -84,7 +84,7 @@ export function BranchManagersSection() {
               </div>
 
               <WhatsAppIcon
-                className="text-[#000065] group-hover:text-white transition"
+                className="text-[#1F2D4B] group-hover:text-white transition"
                 fontSize="small"
               />
             </div>
@@ -100,7 +100,7 @@ export function BranchManagersSection() {
               onClick={() => handleCityClick(city)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeCity.includes(city)
-                  ? "bg-[#000065] text-white shadow-md"
+                  ? "bg-[#1F2D4B] text-white shadow-md"
                   : "bg-gray-200 hover:bg-gray-300"
               }`}
             >

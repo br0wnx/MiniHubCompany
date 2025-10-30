@@ -38,7 +38,7 @@ export function SupportDepartments() {
             onClick={() => window.open("tel:02144854918")}
             className={`flex-1 flex items-center justify-center gap-1 rounded-md py-2 transition-colors ${
               activeButton === "hotline"
-                ? "bg-[#000065] text-white"
+                ? "bg-[#1F2D4B] text-white"
                 : "bg-gray-200"
             }`}
           >
@@ -55,7 +55,7 @@ export function SupportDepartments() {
             }
             className={`flex-1 flex items-center justify-center gap-1 rounded-md py-2 transition-colors ${
               activeButton === "email"
-                ? "bg-[#000065] text-white"
+                ? "bg-[#1F2D4B] text-white"
                 : "bg-gray-200"
             }`}
           >
@@ -81,7 +81,7 @@ export function SupportDepartments() {
                 openWhatsApp(item.phone);
               }}
               className={`flex justify-between items-center rounded-md p-2 cursor-pointer transition-colors ${
-                activeButton === i ? "bg-[#000065] text-white" : "bg-gray-200"
+                activeButton === i ? "bg-[#1F2D4B] text-white" : "bg-gray-200"
               }`}
             >
               <div className="flex flex-col">
@@ -92,7 +92,7 @@ export function SupportDepartments() {
               </div>
               <WhatsAppIcon
                 className={`${
-                  activeButton === i ? "text-white" : "text-[#000065]"
+                  activeButton === i ? "text-white" : "text-[#1F2D4B]"
                 }`}
                 fontSize="small"
               />

@@ -168,17 +168,17 @@ export function GroupCompaniesSection() {
                             onClick={() =>
                               manager?.phone && openWhatsApp(manager.phone)
                             }
-                            className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#000065] group cursor-pointer"
+                            className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#1F2D4B] group cursor-pointer"
                           >
-                            <WhatsAppIcon className="text-[#000065] group-hover:text-white" />
+                            <WhatsAppIcon className="text-[#1F2D4B] group-hover:text-white" />
                           </div>
 
                           {/* Map */}
                           <div
                             onClick={() => manager?.map && openMap(manager.map)}
-                            className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#000065] group cursor-pointer"
+                            className="border border-gray-300 rounded-xl p-1.5 transition-all hover:bg-[#1F2D4B] group cursor-pointer"
                           >
-                            <MapOutlinedIcon className="text-[#000065] group-hover:text-white" />
+                            <MapOutlinedIcon className="text-[#1F2D4B] group-hover:text-white" />
                           </div>
                         </div>
                       </div>
