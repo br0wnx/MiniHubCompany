@@ -98,7 +98,7 @@ export function BranchManagersSection() {
           <div key={city} className="relative">
             <button
               onClick={() => handleCityClick(city)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
                 activeCity.includes(city)
                   ? "bg-[#1F2D4B] text-white shadow-md"
                   : "bg-gray-200 hover:bg-gray-300"
