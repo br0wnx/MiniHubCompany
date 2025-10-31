@@ -8,7 +8,7 @@ export function GroupCompaniesSection() {
   const groupCompanies = [
     {
       id: 1,
-      logo: "/Assets/logo-dkm group/logojava.png",
+      logo: "./Assets/logo-dkm group/logojava.png",
       city: ["Semarang", "Lampung"],
       companyName: "Java Sarana Mitra Sejati",
       website: "https://javasaranamitrasejati.com/",
@@ -27,7 +27,7 @@ export function GroupCompaniesSection() {
     },
     {
       id: 2,
-      logo: "/Assets/logo-dkm group/logoblp.png",
+      logo: "./Assets/logo-dkm group/logoblp.png",
       city: ["Jakarta", "Semarang", "Surabaya"],
       companyName: "Bintang Laut Platinum",
       website: "https://bintanglautplatinum.com/",
@@ -51,7 +51,7 @@ export function GroupCompaniesSection() {
     },
     {
       id: 3,
-      logo: "/Assets/logo-dkm group/logobr.png",
+      logo: "./Assets/logo-dkm group/logobr.png",
       city: ["Surabaya"],
       companyName: "Bintang Rezeki Graha",
       website: "https://bintangrejeki.com/",
