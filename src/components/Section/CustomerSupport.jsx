@@ -36,11 +36,12 @@ export function SupportDepartments() {
         <div className="flex gap-2 mt-3">
           <button
             onClick={() => window.open("tel:02144854918")}
-            className={`flex-1 flex items-center justify-center gap-1 rounded-md py-2 transition-colors ${
-              activeButton === "hotline"
-                ? "bg-[#1F2D4B] text-white"
-                : "bg-gray-200"
-            }`}
+            className={`flex-1 flex items-center justify-center gap-1 rounded-md py-2 transition-colors duration-300 cursor-pointer
+    ${
+      activeButton === "hotline"
+        ? "bg-[#1F2D4B] text-white"
+        : "bg-gray-200 hover:bg-[#1F2D4B] hover:text-white"
+    }`}
           >
             <PhoneOutlinedIcon fontSize="small" />
             <span>Hotline</span>
@@ -53,11 +54,12 @@ export function SupportDepartments() {
                 "_blank"
               )
             }
-            className={`flex-1 flex items-center justify-center gap-1 rounded-md py-2 transition-colors ${
-              activeButton === "email"
-                ? "bg-[#1F2D4B] text-white"
-                : "bg-gray-200"
-            }`}
+            className={`flex-1 flex items-center justify-center gap-1 rounded-md py-2 transition-colors duration-300 cursor-pointer
+    ${
+      activeButton === "email"
+        ? "bg-[#1F2D4B] text-white"
+        : "bg-gray-200 hover:bg-[#1F2D4B] hover:text-white"
+    }`}
           >
             <EmailOutlinedIcon fontSize="small" />
             <span>Email</span>
@@ -80,9 +82,12 @@ export function SupportDepartments() {
                 handleButtonClick(i);
                 openWhatsApp(item.phone);
               }}
-              className={`flex justify-between items-center rounded-md p-2 cursor-pointer transition-colors ${
-                activeButton === i ? "bg-[#1F2D4B] text-white" : "bg-gray-200"
-              }`}
+              className={`flex justify-between items-center rounded-md p-2 cursor-pointer transition-colors duration-300
+    ${
+      activeButton === i
+        ? "bg-[#1F2D4B] text-white"
+        : "bg-gray-200 hover:bg-[#1F2D4B] hover:text-white"
+    }`}
             >
               <div className="flex flex-col">
                 <p className="text-[11px] text-inherit">{item.dept}</p>
@@ -90,9 +95,12 @@ export function SupportDepartments() {
                   {item.name}
                 </p>
               </div>
+
               <WhatsAppIcon
-                className={`${
-                  activeButton === i ? "text-white" : "text-[#1F2D4B]"
+                className={`transition-colors duration-300 ${
+                  activeButton === i
+                    ? "text-white"
+                    : "text-[#1F2D4B] group-hover:text-white"
                 }`}
                 fontSize="small"
               />
