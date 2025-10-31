@@ -4,7 +4,7 @@ export function HeroSection() {
       <section className="min-h-[10vh] md:min-h-[10vh] w-full flex flex-col items-center justify-start bg-white px-4 py-4">
         {/* Logo */}
         <img
-          src="./Assets/dkm-logo.png"
+          src="./assets/dkm-logo.png"
           alt="Dwipa Kharisma Mitra"
           className="w-32 mb-2"
         />
