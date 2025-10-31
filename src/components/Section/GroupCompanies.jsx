@@ -8,7 +8,7 @@ export function GroupCompaniesSection() {
   const groupCompanies = [
     {
       id: 1,
-      logo: "/Assets/logo-dkm group/logojava.png",
+      logo: "/assets/logo-dkm group/logojava.png",
       city: ["Semarang", "Lampung"],
       companyName: "Java Sarana Mitra Sejati",
       website: "https://javasaranamitrasejati.com/",
